@@ -345,7 +345,7 @@ bind2(#esqlite3_stmt{stmt=Stmt}=Statement, [{ParameterName, Value} | Args]) ->
             {error, named_parameter_not_found}
     end.
 
-% Bind with automatic tyoe conversion
+% Bind with automatic type conversion
 bind_arg(Statement, Column, undefined) ->
     bind_null(Statement, Column);
 bind_arg(Statement, Column, null) ->
