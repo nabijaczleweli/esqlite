@@ -253,8 +253,7 @@ changes(#esqlite3{db=Connection}) ->
 get_autocommit(#esqlite3{db=Connection}) ->
     esqlite3_nif:get_autocommit(Connection).
 
-%% @doc Compile a SQL statement. Returns a cached compiled statement which can be used in
-%% queries.
+%% @doc Execute series of semicolon-delimited SQL statements.
 %%
 -spec exec(Connection, Sql) -> ExecResult
     when Connection :: esqlite3(),
